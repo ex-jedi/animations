@@ -1,10 +1,17 @@
 .svg-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: auto;
-  margin: 0 auto;
-  padding: 50px;
+  margin: auto;
+  padding: 0px;
 }
 .svg-wrapper svg {
-  max-height: 90vh;
+  max-height: 70vh;
 }
 
 @-webkit-keyframes turn {

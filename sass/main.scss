@@ -1,17 +1,16 @@
-.homepage-main-content {
-  // @include flex(column);
-  // @include main-grid;
-  // margin: 300px 0;
-  // @include flex(column);
-}
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
 
 .svg-wrapper {
+  @include flex(column);
+
   width: auto;
-  margin: 0 auto;
-  padding: 50px;
+  margin: auto;
+  padding: 0px;
 
   svg {
-    max-height: 90vh;
+    max-height: 70vh;
   }
 }
 
