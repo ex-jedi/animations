@@ -1,0 +1,31 @@
+.homepage-main-content {
+  // @include flex(column);
+  // @include main-grid;
+  // margin: 300px 0;
+  // @include flex(column);
+}
+
+.svg-wrapper {
+  width: auto;
+  margin: 0 auto;
+  padding: 50px;
+
+  svg {
+    max-height: 90vh;
+  }
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+[data-name='Text'] {
+  opacity: 1;
+  transform-origin: center;
+  animation: turn 10s linear infinite forwards;
+}
