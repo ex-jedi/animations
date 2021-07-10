@@ -1,0 +1,37 @@
+.svg-wrapper {
+  width: auto;
+  margin: 0 auto;
+  padding: 50px;
+}
+.svg-wrapper svg {
+  max-height: 90vh;
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes turn {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+[data-name=Text] {
+  opacity: 1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: turn 10s linear infinite forwards;
+          animation: turn 10s linear infinite forwards;
+}
