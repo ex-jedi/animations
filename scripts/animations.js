@@ -15,6 +15,8 @@ import { SplitText } from 'gsap/SplitText';
 // ** GSAP  **
 // *=========================================
 
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
-console.log('Hello');
+// gsap.set('.animated-path', { drawSVG: '90% 100%' });
+
+gsap.fromTo('.animated-path', { drawSVG: '100% 100%' }, { drawSVG: '0% 100%', duration: 60, repeat: -1 });
