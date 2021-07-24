@@ -19,4 +19,14 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
 // gsap.set('.animated-path', { drawSVG: '90% 100%' });
 
-gsap.fromTo('.animated-path', { drawSVG: '100% 100%' }, { drawSVG: '0% 100%', duration: 60, repeat: -1 });
+const plantIllustration = document.querySelectorAll('.svg-wrapper svg path');
+
+gsap.fromTo(
+  plantIllustration,
+  { drawSVG: 0 },
+  {
+    duration: 3,
+    drawSVG: '100%',
+    repeat: -1,
+  }
+);
