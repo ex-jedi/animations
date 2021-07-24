@@ -6,7 +6,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
   margin: auto;
   padding: 0px;
 }
@@ -14,31 +21,20 @@
   max-height: 70vh;
 }
 
-@-webkit-keyframes turn {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
-@keyframes turn {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
-[data-name=Text] {
-  opacity: 1;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: turn 10s linear infinite forwards;
-          animation: turn 10s linear infinite forwards;
+.animated-path {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: -1600;
+  -webkit-animation: dash 5s linear forwards infinite;
+          animation: dash 5s linear forwards infinite;
 }
