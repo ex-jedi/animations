@@ -7748,9 +7748,18 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_CSSRulePlugin__WEBPACK_IMPORTED_MODULE_1__.CSSRulePlugin, gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_DrawSVGPlugin__WEBPACK_IMPORTED_MODULE_3__.DrawSVGPlugin);
 
-// gsap.set('.animated-path', { drawSVG: '90% 100%' });
+// gsap.set('.b1a49ee2-2faf-4a9b-9812-4d128af72021', { drawSVG: '87% 100%' });
 
-gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo('.animated-path', { drawSVG: '100% 100%' }, { drawSVG: '0% 100%', duration: 60, repeat: -1 });
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(
+  '.b1a49ee2-2faf-4a9b-9812-4d128af72021',
+  { drawSVG: '100% 100%' },
+  {
+    drawSVG: '0% 100%',
+    duration: 5,
+    repeat: -1,
+    ease: 'power2.out',
+  }
+);
 
 }();
 /******/ })()
