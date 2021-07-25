@@ -20,6 +20,3 @@
 .svg-wrapper svg {
   max-height: 70vh;
 }
-.svg-wrapper svg path {
-  stroke: orange;
-}
