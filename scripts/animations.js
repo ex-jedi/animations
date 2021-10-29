@@ -15,6 +15,17 @@ import { SplitText } from 'gsap/SplitText';
 // ** GSAP  **
 // *=========================================
 
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
-console.log('Hello');
+// gsap.set('.b1a49ee2-2faf-4a9b-9812-4d128af72021', { drawSVG: '87% 100%' });
+
+gsap.fromTo(
+  '.b1a49ee2-2faf-4a9b-9812-4d128af72021',
+  { drawSVG: '100% 100%' },
+  {
+    drawSVG: '0% 100%',
+    duration: 5,
+    repeat: -1,
+    ease: 'power2.out',
+  }
+);
