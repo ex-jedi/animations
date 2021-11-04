@@ -7901,7 +7901,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+// import { SplitText } from 'gsap/SplitText';
 
 // *=========================================
 // ** GSAP  **
@@ -7909,44 +7909,23 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_CSSRulePlugin__WEBPACK_IMPORTED_MODULE_1__.CSSRulePlugin, gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_DrawSVGPlugin__WEBPACK_IMPORTED_MODULE_3__.DrawSVGPlugin);
 
-// *=========================================
-// ** Logo Animation  **
-// *=========================================
+// ********** Plant Animation **********
 
-function mainLogoAnimation() {
-  const animationOne = document.querySelector('.svg-wrapper #Animation_1');
-  const animationOnePaths = animationOne.querySelectorAll('path');
+ const plantIllustration = document.querySelectorAll('.svg-wrapper svg path');
 
-  const animationTwo = document.querySelector('.svg-wrapper #Animation_2');
-  const animationTwoPaths = animationTwo.querySelectorAll('path');
-
-  const animationThree = document.querySelector('.svg-wrapper #Animation_3');
-  const animationThreePaths = animationThree.querySelectorAll('path');
-
-  const animationFour = document.querySelector('.svg-wrapper #Animation_4');
-  const animationFourPaths = animationFour.querySelectorAll('path');
-
-  const animationFive = document.querySelector('.svg-wrapper #Animation_5');
-  const animationFivePaths = animationFive.querySelectorAll('path');
-
-  const logoImage = document.querySelector('.svg-wrapper image');
-
-  const treeAnimationTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
-    defaults: { duration: 0.4, ease: 'power3.inOut' },
+function plantAnimation() {
+  const mugSteam = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
     repeat: -1,
-    repeatDelay: 5,
+    repeatDelay: 1,
   });
 
-  treeAnimationTimeline
-    .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in', duration: 0.75 })
-    .fromTo(animationOnePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationTwoPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationThreePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationFourPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationFivePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' });
+  mugSteam
+    .fromTo(plantIllustration, { drawSVG: 0 }, { drawSVG: '100%', duration: 2, ease: 'power1.in' });
 }
 
-mainLogoAnimation();
+plantAnimation();
+
 }();
 /******/ })()
 ;
+//# sourceMappingURL=animations-min.js.map

@@ -9,7 +9,7 @@ import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
-import { SplitText } from 'gsap/SplitText';
+// import { SplitText } from 'gsap/SplitText';
 
 // *=========================================
 // ** GSAP  **
@@ -17,41 +17,18 @@ import { SplitText } from 'gsap/SplitText';
 
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
-// *=========================================
-// ** Logo Animation  **
-// *=========================================
+// ********** Plant Animation **********
 
-function mainLogoAnimation() {
-  const animationOne = document.querySelector('.svg-wrapper #Animation_1');
-  const animationOnePaths = animationOne.querySelectorAll('path');
+ const plantIllustration = document.querySelectorAll('.svg-wrapper svg path');
 
-  const animationTwo = document.querySelector('.svg-wrapper #Animation_2');
-  const animationTwoPaths = animationTwo.querySelectorAll('path');
-
-  const animationThree = document.querySelector('.svg-wrapper #Animation_3');
-  const animationThreePaths = animationThree.querySelectorAll('path');
-
-  const animationFour = document.querySelector('.svg-wrapper #Animation_4');
-  const animationFourPaths = animationFour.querySelectorAll('path');
-
-  const animationFive = document.querySelector('.svg-wrapper #Animation_5');
-  const animationFivePaths = animationFive.querySelectorAll('path');
-
-  const logoImage = document.querySelector('.svg-wrapper image');
-
-  const treeAnimationTimeline = gsap.timeline({
-    defaults: { duration: 0.4, ease: 'power3.inOut' },
+function plantAnimation() {
+  const mugSteam = gsap.timeline({
     repeat: -1,
-    repeatDelay: 5,
+    repeatDelay: 1,
   });
 
-  treeAnimationTimeline
-    .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in', duration: 0.75 })
-    .fromTo(animationOnePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationTwoPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationThreePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationFourPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationFivePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' });
+  mugSteam
+    .fromTo(plantIllustration, { drawSVG: 0 }, { drawSVG: '100%', duration: 2, ease: 'power1.in' });
 }
 
-mainLogoAnimation();
+plantAnimation();
