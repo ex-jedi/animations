@@ -7947,6 +7947,8 @@ function mainLogoAnimation() {
 }
 
 mainLogoAnimation();
+
 }();
 /******/ })()
 ;
+//# sourceMappingURL=animations-min.js.map
