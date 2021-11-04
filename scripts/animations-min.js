@@ -7909,20 +7909,21 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_CSSRulePlugin__WEBPACK_IMPORTED_MODULE_1__.CSSRulePlugin, gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_DrawSVGPlugin__WEBPACK_IMPORTED_MODULE_3__.DrawSVGPlugin);
 
-// ********** Homepage Mug Animation **********
+// ********** Plant Animation **********
 
-function steamingCup() {
+ const plantIllustration = document.querySelectorAll('.svg-wrapper svg path');
+
+function plantAnimation() {
   const mugSteam = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
     repeat: -1,
-    repeatDelay: 0,
+    repeatDelay: 1,
   });
 
   mugSteam
-    .fromTo('.st1', { drawSVG: 0 }, { drawSVG: '25% 100%', duration: 2, ease: 'power1.in' })
-    .to('.st1', { drawSVG: '100% 100%', duration: 2, ease: 'power1.out' });
+    .fromTo(plantIllustration, { drawSVG: 0 }, { drawSVG: '100%', duration: 2, ease: 'power1.in' });
 }
 
-steamingCup();
+plantAnimation();
 
 }();
 /******/ })()
