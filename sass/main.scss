@@ -1,6 +1,6 @@
 //********** Imports **********
 
-@use 'bits' as *; //Contains variables, media queries mixins etc.
+@use "bits" as *; //Contains variables, media queries mixins etc.
 
 body {
   height: 100vh;
@@ -17,8 +17,7 @@ body {
   height: 100vh;
   margin: auto;
   padding: 0;
-  background-color: #F9EDE8;
-
+  background-color: #faf6f1;
 
   svg {
     max-height: 70vh;
