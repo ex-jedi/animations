@@ -1,3 +1,8 @@
+body {
+  background-color: #fdfcfa;
+  overflow: hidden;
+}
+
 .svg-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,6 +21,7 @@
   height: 100vh;
   margin: auto;
   padding: 0px;
+  background-color: #fdfcfa;
 }
 .svg-wrapper svg {
   max-height: 70vh;

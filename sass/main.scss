@@ -1,6 +1,11 @@
 //********** Imports **********
 
-@use 'bits' as *; //Contains variables, media queries mixins etc.
+@use "bits" as *; //Contains variables, media queries mixins etc.
+
+body {
+  background-color: #fdfcfa;
+  overflow: hidden;
+}
 
 .svg-wrapper {
   @include flex(column);
@@ -10,6 +15,7 @@
   height: 100vh;
   margin: auto;
   padding: 0px;
+  background-color: #fdfcfa;
 
   svg {
     max-height: 70vh;
@@ -25,7 +31,7 @@
   }
 }
 
-[data-name='Text'] {
+[data-name="Text"] {
   opacity: 1;
   transform-origin: center;
   animation: turn 10s linear infinite forwards;
