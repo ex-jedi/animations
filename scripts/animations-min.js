@@ -7915,6 +7915,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_CSSRulePlugin__WEBPAC
 
 function mainLogoAnimation() {
   const animationOne = document.querySelector('.svg-wrapper #Animation_1');
+  console.log({animationOne});
   const animationOnePaths = animationOne.querySelectorAll('path');
 
   const animationTwo = document.querySelector('.svg-wrapper #Animation_2');
@@ -7929,7 +7930,6 @@ function mainLogoAnimation() {
   const animationFive = document.querySelector('.svg-wrapper #Animation_5');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
-  const logoImage = document.querySelector('.svg-wrapper image');
 
   const treeAnimationTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
     defaults: { duration: 0.4, ease: 'power3.inOut' },
@@ -7938,7 +7938,6 @@ function mainLogoAnimation() {
   });
 
   treeAnimationTimeline
-    .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in', duration: 0.75 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
