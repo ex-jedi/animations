@@ -27,4 +27,5 @@ body {
 }
 .svg-wrapper svg {
   max-height: 70vh;
+  fill: #000;
 }
