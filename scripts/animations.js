@@ -21,36 +21,33 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // ** Logo Animation  **
 // *=========================================
 
-function mainLogoAnimation() {
-  const animationOne = document.querySelector('.svg-wrapper #Animation_1');
-  console.log({animationOne});
-  const animationOnePaths = animationOne.querySelectorAll('path');
+// *=========================================
+// ** Main Logo  **
+// *=========================================
 
-  const animationTwo = document.querySelector('.svg-wrapper #Animation_2');
-  const animationTwoPaths = animationTwo.querySelectorAll('path');
+const kateImages = gsap.utils.toArray('.kate-images-wrapper img');
+const markImages = gsap.utils.toArray('.mark-images-wrapper img');
 
-  const animationThree = document.querySelector('.svg-wrapper #Animation_3');
-  const animationThreePaths = animationThree.querySelectorAll('path');
+const animatedMainLogoTimeline = gsap.timeline({
+  repeat: -1,
+  repeatDelay: 1,
+  defaults: { ease: 'none', duration: 0 },
+});
 
-  const animationFour = document.querySelector('.svg-wrapper #Animation_4');
-  const animationFourPaths = animationFour.querySelectorAll('path');
+animatedMainLogoTimeline
+  .to(markImages[0], { opacity: 0 }, '+=1')
+  .to(markImages[1], { opacity: 1 })
+  .to(kateImages[0], { opacity: 0 }, '+=1')
+  .to(kateImages[1], { opacity: 1 })
+  .to(kateImages[1], { opacity: 0 }, '+=1')
+  .to(kateImages[2], { opacity: 1 })
+  .to(markImages[1], { opacity: 0 }, '+=1')
+  .to(markImages[2], { opacity: 1 })
+  .to(kateImages[2], { opacity: 0 }, '+=1')
+  .to(kateImages[0], { opacity: 1 });
 
-  const animationFive = document.querySelector('.svg-wrapper #Animation_5');
-  const animationFivePaths = animationFive.querySelectorAll('path');
-
-
-  const treeAnimationTimeline = gsap.timeline({
-    defaults: { duration: 0.4, ease: 'power3.inOut' },
-    repeat: -1,
-    repeatDelay: 5,
-  });
-
-  treeAnimationTimeline
-    .fromTo(animationOnePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationTwoPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationThreePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationFourPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
-    .fromTo(animationFivePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' });
+function animatedMainLogo() {
+  animatedMainLogoTimeline.play();
 }
 
-mainLogoAnimation();
+animatedMainLogo();
